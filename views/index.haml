@@ -1,0 +1,19 @@
+- if @notice
+  .notice= @notice
+
+%h1 RabbitMQ Demo App
+
+%h2 Publish a message
+%form{ :action => "/", :method => "post" }
+  %label
+    Post a message:
+    %input{ :type => "text", :name => "message" }
+  %input{ :type => "submit", :value => "post" }
+
+%h2 Get a message
+%form{ :action => "/message", :method => "get" }
+  %input{ :type => "submit", :value => "get" }
+
+- if @message
+  %h2 Got a message!
+  %p= @message
