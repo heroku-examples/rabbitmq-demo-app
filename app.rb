@@ -1,5 +1,5 @@
 require 'sinatra/base'
-require 'lib/sinatra_rabbitmq'
+require "#{File.dirname(__FILE__)}/lib/sinatra_rabbitmq"
 
 class RabbitmqDemo < Sinatra::Base
   register Sinatra::RabbitMQ
